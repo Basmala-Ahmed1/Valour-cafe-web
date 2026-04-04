@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Velour Café | Where Coffee Becomes Ritual</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- Navbar -->
+      <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500 bg-transparent py-6">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+          <a href="#home" class="text-2xl font-serif font-bold tracking-widest text-velour-brown uppercase">
+            Velour
+          </a>
+
+          <!-- Desktop Nav -->
+          <div class="hidden md:flex space-x-10">
+            <a href="#home" class="text-sm font-medium tracking-widest uppercase hover:text-velour-gold transition-colors">Home</a>
+            <a href="#about" class="text-sm font-medium tracking-widest uppercase hover:text-velour-gold transition-colors">About</a>
+            <a href="#menu" class="text-sm font-medium tracking-widest uppercase hover:text-velour-gold transition-colors">Menu</a>
+            <a href="#gallery" class="text-sm font-medium tracking-widest uppercase hover:text-velour-gold transition-colors">Gallery</a>
+            <a href="#contact" class="text-sm font-medium tracking-widest uppercase hover:text-velour-gold transition-colors">Contact</a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-btn" class="md:hidden">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Mobile Menu Overlay -->
+      <div id="mobile-menu" class="fixed inset-0 bg-velour-cream z-[60] flex flex-col items-center justify-center space-y-8 hidden opacity-0 translate-x-full transition-all duration-500">
+        <button id="close-menu-btn" class="absolute top-6 right-6">
+          <i data-lucide="x" class="w-8 h-8"></i>
+        </button>
+        <a href="#home" class="mobile-link text-3xl font-serif hover:text-velour-gold transition-colors">Home</a>
+        <a href="#about" class="mobile-link text-3xl font-serif hover:text-velour-gold transition-colors">About</a>
+        <a href="#menu" class="mobile-link text-3xl font-serif hover:text-velour-gold transition-colors">Menu</a>
+        <a href="#gallery" class="mobile-link text-3xl font-serif hover:text-velour-gold transition-colors">Gallery</a>
+        <a href="#contact" class="mobile-link text-3xl font-serif hover:text-velour-gold transition-colors">Contact</a>
+      </div>
+
+      <!-- Hero Section -->
+      <section id="home" class="relative h-screen w-full overflow-hidden flex items-center justify-center">
+        <div class="absolute inset-0 z-0">
+          <video autoPlay muted loop playsInline class="w-full h-full object-cover brightness-[0.6]">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-pouring-coffee-into-a-cup-2935-large.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        <div class="relative z-10 text-center px-6 max-w-4xl">
+          <h1 id="hero-title" class="text-5xl md:text-8xl text-white mb-6 leading-tight opacity-0 translate-y-8">
+            Where Coffee <br /> Becomes <span class="italic">Ritual</span>
+          </h1>
+          <p id="hero-subtext" class="text-velour-cream/90 text-lg md:text-xl mb-10 font-light tracking-wide max-w-2xl mx-auto opacity-0 translate-y-8">
+            Crafted drinks. Calm atmosphere. A space to slow down.
+          </p>
+          <div id="hero-btn" class="opacity-0 scale-90">
+            <a href="#menu" class="inline-block px-10 py-4 bg-velour-gold text-white uppercase tracking-widest text-sm font-semibold hover:bg-velour-gold/90 transition-all rounded-sm shadow-xl">
+              View Menu
+            </a>
+          </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div id="scroll-indicator" class="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/50 flex flex-col items-center">
+          <span class="text-[10px] uppercase tracking-[0.3em] mb-2">Scroll</span>
+          <div class="w-[1px] h-12 bg-white/20 relative overflow-hidden">
+            <div id="scroll-line" class="w-full h-1/3 bg-white absolute top-0"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="py-24 md:py-32 px-6 bg-velour-cream">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+          <div class="about-image relative opacity-0 -translate-x-12">
+            <div class="aspect-[4/5] overflow-hidden rounded-sm shadow-2xl">
+              <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=1200" alt="Barista at work" class="w-full h-full object-cover" referrerPolicy="no-referrer" />
+            </div>
+            <div class="absolute -bottom-8 -right-8 w-48 h-48 bg-velour-gold/10 -z-10 rounded-sm"></div>
+          </div>
+
+          <div class="about-content opacity-0 translate-x-12">
+            <span class="text-velour-gold uppercase tracking-[0.3em] text-xs font-bold mb-4 block">Our Story</span>
+            <h2 class="text-4xl md:text-5xl mb-8 leading-tight">A Sanctuary for the Senses</h2>
+            <p class="text-velour-brown/70 leading-relaxed mb-6 text-lg">
+              Velour Café was created as a space where time slows down. In the heart of the city, we've built a sanctuary that celebrates the art of the pause.
+            </p>
+            <p class="text-velour-brown/70 leading-relaxed mb-8 text-lg">
+              Our beans are ethically sourced from small-batch roasters who share our passion for quality and sustainability. Every cup is a testament to our commitment to excellence, served in an atmosphere designed for quiet reflection and creative spark.
+            </p>
+            <div class="flex items-center space-x-4 text-velour-gold">
+              <div class="w-12 h-[1px] bg-velour-gold"></div>
+              <span class="font-serif italic text-xl">Velour Team</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Menu Section -->
+      <section id="menu" class="py-24 md:py-32 px-6 bg-velour-beige">
+        <div class="max-w-5xl mx-auto">
+          <div class="text-center mb-20">
+            <span class="text-velour-gold uppercase tracking-[0.3em] text-xs font-bold mb-4 block">The Menu</span>
+            <h2 class="text-4xl md:text-5xl">Curated Selections</h2>
+          </div>
+
+          <div id="menu-container" class="space-y-20">
+            <!-- Menu items will be injected here or hardcoded -->
+          </div>
+
+          <div class="mt-20 text-center">
+            <a href="#contact" class="inline-block px-12 py-5 border border-velour-gold text-velour-gold uppercase tracking-widest text-sm font-bold hover:bg-velour-gold hover:text-white transition-all duration-500">
+              Reserve a Table
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery Section -->
+      <section id="gallery" class="py-24 md:py-32 px-6 bg-velour-cream">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-20">
+            <span class="text-velour-gold uppercase tracking-[0.3em] text-xs font-bold mb-4 block">Visual Experience</span>
+            <h2 class="text-4xl md:text-5xl">The Velour Gallery</h2>
+          </div>
+
+          <div id="gallery-grid" class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
+            <!-- Gallery items will be injected here -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+      <section class="py-24 md:py-32 px-6 bg-velour-brown text-velour-cream">
+        <div class="max-w-7xl mx-auto">
+          <div id="experience-grid" class="grid md:grid-cols-4 gap-12">
+            <!-- Experience items will be injected here -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="py-24 md:py-32 px-6 bg-velour-cream">
+        <div class="max-w-7xl mx-auto">
+          <div class="grid md:grid-cols-2 gap-20">
+            <div class="contact-info opacity-0 -translate-x-8">
+              <h2 class="text-4xl md:text-5xl mb-12">Connect with Us</h2>
+              
+              <div class="space-y-8 mb-12">
+                <div class="flex items-start space-x-6">
+                  <i data-lucide="map-pin" class="w-6 h-6 text-velour-gold shrink-0"></i>
+                  <div>
+                    <h4 class="font-bold mb-1">Address</h4>
+                    <p class="text-velour-brown/60">123 Aesthetic St, Minimalism District<br />New York, NY 10001</p>
+                  </div>
+                </div>
+                <div class="flex items-start space-x-6">
+                  <i data-lucide="clock" class="w-6 h-6 text-velour-gold shrink-0"></i>
+                  <div>
+                    <h4 class="font-bold mb-1">Opening Hours</h4>
+                    <p class="text-velour-brown/60">Mon - Fri: 07:00 - 20:00<br />Sat - Sun: 08:00 - 21:00</p>
+                  </div>
+                </div>
+                <div class="flex items-start space-x-6">
+                  <i data-lucide="phone" class="w-6 h-6 text-velour-gold shrink-0"></i>
+                  <div>
+                    <h4 class="font-bold mb-1">Phone</h4>
+                    <p class="text-velour-brown/60">+1 (555) 123-4567</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="h-64 bg-velour-beige rounded-sm overflow-hidden grayscale contrast-125 opacity-80">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869428!2d-74.119763973046!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY!5e0!3m2!1sen!2s!4v1647891234567!5m2!1sen!2s" width="100%" height="100%" style="border: 0" allowFullScreen loading="lazy" title="Google Map"></iframe>
+              </div>
+            </div>
+
+            <div class="contact-form opacity-0 translate-x-8 bg-velour-beige p-10 rounded-sm shadow-sm">
+              <h3 class="text-2xl font-serif mb-8">Send a Message</h3>
+              <form action="https://formspree.io/maqllwyk" method="POST" class="space-y-6">
+                <div>
+                  <label class="block text-xs uppercase tracking-widest font-bold mb-2">Full Name</label>
+                  <input type="text" name="name" required class="w-full bg-transparent border-b border-velour-brown/20 py-3 focus:border-velour-gold outline-none transition-colors" placeholder="Your Name" />
+                </div>
+                <div>
+                  <label class="block text-xs uppercase tracking-widest font-bold mb-2">Email Address</label>
+                  <input type="email" name="email" required class="w-full bg-transparent border-b border-velour-brown/20 py-3 focus:border-velour-gold outline-none transition-colors" placeholder="hello@example.com" />
+                </div>
+                <div>
+                  <label class="block text-xs uppercase tracking-widest font-bold mb-2">Phone Number</label>
+                  <input type="tel" name="phone" class="w-full bg-transparent border-b border-velour-brown/20 py-3 focus:border-velour-gold outline-none transition-colors" placeholder="+1 (555) 000-0000" />
+                </div>
+                <div>
+                  <label class="block text-xs uppercase tracking-widest font-bold mb-2">Message</label>
+                  <textarea name="message" required rows="4" class="w-full bg-transparent border-b border-velour-brown/20 py-3 focus:border-velour-gold outline-none transition-colors resize-none" placeholder="How can we help you?"></textarea>
+                </div>
+                <button type="submit" class="w-full py-4 bg-velour-brown text-white uppercase tracking-widest text-sm font-bold hover:bg-velour-gold transition-all duration-500">
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="py-20 px-6 bg-velour-cream border-t border-velour-brown/5">
+        <div class="max-w-7xl mx-auto flex flex-col items-center">
+          <a href="#home" class="text-3xl font-serif font-bold tracking-[0.3em] text-velour-brown uppercase mb-6">
+            Velour
+          </a>
+          <p class="text-velour-brown/50 italic mb-10">"More than coffee. It's a feeling."</p>
+          
+          <div class="flex space-x-8 mb-12">
+            <a href="#" class="text-velour-brown/40 hover:text-velour-gold transition-colors"><i data-lucide="instagram"></i></a>
+            <a href="#" class="text-velour-brown/40 hover:text-velour-gold transition-colors"><i data-lucide="facebook"></i></a>
+            <a href="#" class="text-velour-brown/40 hover:text-velour-gold transition-colors"><i data-lucide="twitter"></i></a>
+          </div>
+
+          <div class="flex flex-wrap justify-center gap-x-10 gap-y-4 text-xs uppercase tracking-widest text-velour-brown/40 mb-12">
+            <a href="#home" class="hover:text-velour-brown transition-colors">Home</a>
+            <a href="#about" class="hover:text-velour-brown transition-colors">About</a>
+            <a href="#menu" class="hover:text-velour-brown transition-colors">Menu</a>
+            <a href="#gallery" class="hover:text-velour-brown transition-colors">Gallery</a>
+            <a href="#contact" class="hover:text-velour-brown transition-colors">Contact</a>
+          </div>
+
+          <p id="copyright" class="text-[10px] uppercase tracking-[0.2em] text-velour-brown/30">
+            &copy; <span id="year"></span> Velour Café. All rights reserved.
+          </p>
+        </div>
+      </footer>
+
+      <!-- Floating Action Button -->
+      <div id="fab" class="fixed bottom-8 right-8 z-40 opacity-0 scale-0">
+        <a href="#contact" class="flex items-center space-x-3 gold-gradient text-white px-6 py-4 rounded-full shadow-2xl hover:scale-105 transition-transform group">
+          <i data-lucide="coffee" class="w-5 h-5 group-hover:rotate-12 transition-transform"></i>
+          <span class="uppercase tracking-widest text-xs font-bold">Order Now</span>
+        </a>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
+
